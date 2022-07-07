@@ -14,15 +14,17 @@ namespace Homeworks_OOP
     }
 
     /// <summary>
-    /// Изменить класс счет в банке из упражнения таким образом, чтобы номер счета
-    /// генерировался сам и был уникальным.Для этого надо создать в классе
-    /// статическую переменную и метод, который увеличивает значение этого
-    /// переменной.
+    /// В классе банковский счет, удалить методы заполнения полей. Вместо этих
+    /// методов создать конструкторы.Переопределить конструктор по умолчанию,
+    /// создать конструктор для заполнения поля баланс, конструктор для заполнения
+    /// поля тип банковского счета, конструктор для заполнения баланса и типа
+    /// банковского счета.Каждый конструктор должен вызывать метод, генерирующий
+    /// номер счета.
     /// </summary>
     internal class BankAccount
     {
-        public override string ToString() => $"[{GetID}] ({Balance}) {Type}";
-        Random rnd = new Random();
+        public override string ToString() => $"[{GetID}] ({_balance}) {_type} {_bankNumber}";
+
 
         static int ID;
 
@@ -31,33 +33,29 @@ namespace Homeworks_OOP
         private AccountType _type;
 
 
+        public BankAccount() { _bankNumber = GetID(); }
+        public BankAccount(decimal balance) { _balance = balance; _bankNumber = GetID(); }
 
-        public decimal GetID()
+        public BankAccount(AccountType type) { _type = type; GetID(); }
+
+        public BankAccount(decimal balance, AccountType type) {_balance = balance; _type = type; GetID(); }
+
+
+        Random rnd = new Random();
+        public int GetID()
         {
             if (_bankNumber == 0)
                 _bankNumber = rnd.Next(0, 1000000);
             return _bankNumber;
         }
-        public int BankNumber
-        {
-           get => _bankNumber;
-           set => _bankNumber = value;
-        }
 
-        public decimal Balance
-        {
-            get => _balance;
-            set => _balance = value;
-        }
-
-        public AccountType Type
-        {
-            get => _type;
-            set => _type = value;
-        }
-        public static decimal NewID()
+        public static int NewID()
         {
             return ++ID;
+        }
+        public string Print()
+        {
+            return $"Account number: {_bankNumber}{Environment.NewLine}Account type: {AccountType.Debit}{Environment.NewLine}Balance: {_balance}";
         }
     }
 }
