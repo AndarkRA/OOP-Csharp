@@ -14,20 +14,30 @@ namespace Homeworks_OOP
     }
 
     /// <summary>
-    /// Создать класс счет в банке с закрытыми полями: номер счета, баланс, тип
-    /// банковского счета(использовать перечислимый тип). Предусмотреть методы для
-    /// доступа к данным – заполнения и чтения.Создать объект класса, заполнить его
-    /// поля и вывести информацию об объекте класса на печать
+    /// Изменить класс счет в банке из упражнения таким образом, чтобы номер счета
+    /// генерировался сам и был уникальным.Для этого надо создать в классе
+    /// статическую переменную и метод, который увеличивает значение этого
+    /// переменной.
     /// </summary>
     internal class BankAccount
     {
-        public override string ToString() => $"[{BankNumber}] ({Balance}) {Type}";
+        public override string ToString() => $"[{GetID}] ({Balance}) {Type}";
+        Random rnd = new Random();
+
+        static int ID;
 
         private int _bankNumber;
         private decimal _balance;
         private AccountType _type;
 
 
+
+        public decimal GetID()
+        {
+            if (_bankNumber == 0)
+                _bankNumber = rnd.Next(0, 1000000);
+            return _bankNumber;
+        }
         public int BankNumber
         {
            get => _bankNumber;
@@ -45,6 +55,9 @@ namespace Homeworks_OOP
             get => _type;
             set => _type = value;
         }
-
+        public static decimal NewID()
+        {
+            return ++ID;
+        }
     }
 }
