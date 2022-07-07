@@ -1,0 +1,15 @@
+C:\GeekBrains\OOP C#\Homeworks\OOP-Csharp\Homework02\Homeworks_OOP\Homeworks_OOP\bin\Debug\net6.0\Homeworks_OOP.exe
+C:\GeekBrains\OOP C#\Homeworks\OOP-Csharp\Homework02\Homeworks_OOP\Homeworks_OOP\bin\Debug\net6.0\Homeworks_OOP.deps.json
+C:\GeekBrains\OOP C#\Homeworks\OOP-Csharp\Homework02\Homeworks_OOP\Homeworks_OOP\bin\Debug\net6.0\Homeworks_OOP.runtimeconfig.json
+C:\GeekBrains\OOP C#\Homeworks\OOP-Csharp\Homework02\Homeworks_OOP\Homeworks_OOP\bin\Debug\net6.0\Homeworks_OOP.dll
+C:\GeekBrains\OOP C#\Homeworks\OOP-Csharp\Homework02\Homeworks_OOP\Homeworks_OOP\bin\Debug\net6.0\Homeworks_OOP.pdb
+C:\GeekBrains\OOP C#\Homeworks\OOP-Csharp\Homework02\Homeworks_OOP\Homeworks_OOP\obj\Debug\net6.0\Homeworks_OOP.csproj.AssemblyReference.cache
+C:\GeekBrains\OOP C#\Homeworks\OOP-Csharp\Homework02\Homeworks_OOP\Homeworks_OOP\obj\Debug\net6.0\Homeworks_OOP.GeneratedMSBuildEditorConfig.editorconfig
+C:\GeekBrains\OOP C#\Homeworks\OOP-Csharp\Homework02\Homeworks_OOP\Homeworks_OOP\obj\Debug\net6.0\Homeworks_OOP.AssemblyInfoInputs.cache
+C:\GeekBrains\OOP C#\Homeworks\OOP-Csharp\Homework02\Homeworks_OOP\Homeworks_OOP\obj\Debug\net6.0\Homeworks_OOP.AssemblyInfo.cs
+C:\GeekBrains\OOP C#\Homeworks\OOP-Csharp\Homework02\Homeworks_OOP\Homeworks_OOP\obj\Debug\net6.0\Homeworks_OOP.csproj.CoreCompileInputs.cache
+C:\GeekBrains\OOP C#\Homeworks\OOP-Csharp\Homework02\Homeworks_OOP\Homeworks_OOP\obj\Debug\net6.0\Homeworks_OOP.dll
+C:\GeekBrains\OOP C#\Homeworks\OOP-Csharp\Homework02\Homeworks_OOP\Homeworks_OOP\obj\Debug\net6.0\refint\Homeworks_OOP.dll
+C:\GeekBrains\OOP C#\Homeworks\OOP-Csharp\Homework02\Homeworks_OOP\Homeworks_OOP\obj\Debug\net6.0\Homeworks_OOP.pdb
+C:\GeekBrains\OOP C#\Homeworks\OOP-Csharp\Homework02\Homeworks_OOP\Homeworks_OOP\obj\Debug\net6.0\Homeworks_OOP.genruntimeconfig.cache
+C:\GeekBrains\OOP C#\Homeworks\OOP-Csharp\Homework02\Homeworks_OOP\Homeworks_OOP\obj\Debug\net6.0\ref\Homeworks_OOP.dll
