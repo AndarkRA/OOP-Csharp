@@ -57,5 +57,19 @@ namespace Homeworks_OOP
         {
             return $"Account number: {_bankNumber}{Environment.NewLine}Account type: {AccountType.Debit}{Environment.NewLine}Balance: {_balance}";
         }
+
+        public void AddBalance(decimal money)
+        {
+            _balance += money;
+        }
+        public bool PullBalance(decimal money)
+        {
+            if (_balance >= money)
+            {
+                _balance -= money;
+                return true;
+            }
+            return false;
+        }
     }
 }
