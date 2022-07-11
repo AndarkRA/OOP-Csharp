@@ -1,12 +1,19 @@
 ﻿using Homeworks_OOP;
 
-BankAccount bankAccount = new BankAccount(35, AccountType.Debit);
-bankAccount.AddBalance(1000);
+/// <summary>
+///  В класс банковский счет, созданный в упражнениях, добавить метод, который переводит деньги с одного счета на другой. 
+///  У метода два параметра: ссылка на объект класса банковский счет откуда снимаются деньги, второй параметр – сумма.
+/// </summary>
 
+var account = new BankAccount(1000, AccountType.Current);
+Console.WriteLine(account);
 
+var newAccount = new BankAccount(1000, AccountType.Current);
+Console.WriteLine(newAccount);
 
+account.Transaction(ref newAccount, 1000);
+Console.WriteLine($"Переводим 1000 рублей со счета {newAccount.GetID()} на счет {account.GetID()}.");
+Console.WriteLine(account);
+Console.WriteLine(newAccount);
 
-Console.WriteLine(bankAccount.Print());
-
-if (!bankAccount.PullBalance(500))
-	Console.WriteLine("Недостаточно средств!");
+Console.ReadKey();

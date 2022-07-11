@@ -6,24 +6,17 @@ using System.Threading.Tasks;
 
 namespace Homeworks_OOP
 {
-    enum AccountType
+    public enum AccountType
     {
         Credit,
         Debit,
         Current
     }
 
-    /// <summary>
-    /// В классе банковский счет, удалить методы заполнения полей. Вместо этих
-    /// методов создать конструкторы.Переопределить конструктор по умолчанию,
-    /// создать конструктор для заполнения поля баланс, конструктор для заполнения
-    /// поля тип банковского счета, конструктор для заполнения баланса и типа
-    /// банковского счета.Каждый конструктор должен вызывать метод, генерирующий
-    /// номер счета.
-    /// </summary>
+
     internal class BankAccount
     {
-        public override string ToString() => $"[{GetID}] ({_balance}) {_type} {_bankNumber}";
+        //public override string ToString() => $"[{GetID}] ({_balance}) {_type} {_bankNumber}";
 
 
         static int ID;
@@ -70,6 +63,29 @@ namespace Homeworks_OOP
                 return true;
             }
             return false;
+        }
+
+        public void PutMoney(decimal money)
+        {
+            _balance += money;
+        }
+
+        public decimal GetMoney(decimal money)
+        {
+            if (_balance < money) return 0;
+            _balance -= money;
+            return money;
+        }
+
+        public bool Transaction(ref BankAccount bankAccount, decimal money)
+        {
+            bankAccount.GetMoney(money);
+            this.PutMoney(money);
+            return true;
+        }
+        public override string ToString()
+        {
+            return $"Номер счета: [{GetID()}];\n Тип счета: {_type};\n Остаток на текущий момент, руб.: {_balance}.";
         }
     }
 }
