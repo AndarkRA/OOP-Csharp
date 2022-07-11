@@ -16,4 +16,10 @@ Console.WriteLine($"Переводим 1000 рублей со счета {newAcc
 Console.WriteLine(account);
 Console.WriteLine(newAccount);
 
+Console.WriteLine("=====================================");
+StringReverse stringReverse = new();
+Console.WriteLine($"{stringReverse.StringChange("Шла Саша по шоссе и сосала сушку")}");
+
+
+
 Console.ReadKey();
