@@ -1,25 +1,31 @@
 ﻿using Homeworks_OOP;
 
 /// <summary>
-///  В класс банковский счет, созданный в упражнениях, добавить метод, который переводит деньги с одного счета на другой. 
-///  У метода два параметра: ссылка на объект класса банковский счет откуда снимаются деньги, второй параметр – сумма.
+///  Реализовать класс для описания здания (уникальный номер здания, высота, этажность, количество квартир, подъездов). 
+///  Поля сделать закрытыми, предусмотреть методы для заполнения полей и получения значений полей для печати. 
+///  Добавить методы вычисления высоты этажа, количества квартир в подъезде, количества квартир на этаже и т.д. 
+///  Предусмотреть возможность, чтобы уникальный номер здания генерировался программно. Для этого в классе предусмотреть статическое поле, 
+///  которое бы хранило последний использованный номер здания, и предусмотреть метод, который увеличивал бы значение этого поля.
 /// </summary>
 
-var account = new BankAccount(1000, AccountType.Current);
-Console.WriteLine(account);
+Building building = new Building();
+building.ChangeApartmentCount(10);
+building.ChangeEntranceCount(12);
+building.ChangeFloorCount(3);
+building.ChangeHeight(125);
 
-var newAccount = new BankAccount(1000, AccountType.Current);
-Console.WriteLine(newAccount);
+Console.WriteLine(building);
+Console.WriteLine();
+Console.WriteLine("Количество квартир на этаже: " + building.GetApartmentCountInFloor());
+Console.WriteLine("Высота этажа: " + building.GetFloorHeight() + "м\n");
 
-account.Transaction(ref newAccount, 1000);
-Console.WriteLine($"Переводим 1000 рублей со счета {newAccount.GetID()} на счет {account.GetID()}.");
-Console.WriteLine(account);
-Console.WriteLine(newAccount);
+// убедимся, что id увеличивается
 
-Console.WriteLine("=====================================");
-StringReverse stringReverse = new();
-Console.WriteLine($"{stringReverse.StringChange("Шла Саша по шоссе и сосала сушку")}");
+for (int i = 0; i < 100; i++)
+{
+    Building building2 = new Building();
+    Console.WriteLine(building2.ID);
+}
 
-
-
+Console.ReadKey();
 Console.ReadKey();
