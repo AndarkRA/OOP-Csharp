@@ -1,26 +1,19 @@
 ﻿using Homeworks_OOP;
 
-/// <summary>
-///  Создать класс рациональных чисел. В классе два поля – числитель и знаменатель. 
-///  Предусмотреть конструктор. Определить операторы ==, != (метод Equals()), <, >, <=, >=, +, –, ++, --. 
-///  Переопределить метод ToString() для вывода дроби. 
-///  Определить операторы преобразования типов между типом дробь,float, int. Определить операторы *, /, %.
-/// </summary>
 
-RatioNumber number1 = new RatioNumber(5, 10);
-RatioNumber number2 = new RatioNumber(2, 10);
 
-Console.WriteLine(number1 == number2);
-Console.WriteLine(number1 != number2);
-Console.WriteLine(number1 < number2);
-Console.WriteLine(number1 <= number2);
-Console.WriteLine(number1 > number2);
-Console.WriteLine(number1 >= number2);
-Console.WriteLine($"{ number1}, {number2}");
+var account1 = new BankAccount(100);
+var account2 = new BankAccount(5000);
 
-//Console.Clear();
-//float number3 = number1 * number2;
-Console.WriteLine((number1 / number2).ToString());
-Console.WriteLine((number1 % number2).ToString());
+Console.WriteLine(account1);
+Console.WriteLine(account2);
+
+Console.WriteLine($"Transaction success: {account1.Transaction(ref account2, 5000)}\n");
+
+Console.WriteLine(account1.Equals(account2));
+Console.WriteLine(account2.Equals(account2));
+
+Console.WriteLine(account1 == account2);
+Console.WriteLine(account1 != account2);
 
 Console.ReadKey();

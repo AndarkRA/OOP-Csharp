@@ -83,9 +83,39 @@ namespace Homeworks_OOP
             this.PutMoney(money);
             return true;
         }
+        //public override string ToString()
+        //{
+        //    return $"Номер счета: [{GetID()}];\n Тип счета: {_type};\n Остаток на текущий момент, руб.: {_balance}.";
+        //}
+
+        /// <summary>
+        /// Для класса банковский счет переопределить операторы == и != для сравнения информации в двух счетах. 
+        /// Переопределить метод Equals аналогично оператору ==, не забыть переопределить метод GetHashCode(). 
+        /// Переопределить методToString() для печати информации о счете. 
+        /// Протестировать функционирование переопределенных методов и операторов на простом примере.
+        /// </summary>
         public override string ToString()
         {
-            return $"Номер счета: [{GetID()}];\n Тип счета: {_type};\n Остаток на текущий момент, руб.: {_balance}.";
+            return $"Счёт номер\t{GetID()}\nБаланс\t\t{_balance}\nТип\t\t{_type}\n";
         }
+
+        public override int GetHashCode()
+        {
+            var hash = new HashCode();
+            hash.Add(GetID());
+            hash.Add(_balance);
+            hash.Add(_type);
+            return hash.ToHashCode();
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || obj is not BankAccount)
+            {
+                return false;
+            }
+            return this == (BankAccount)obj;
+        }
+
     }
 }
