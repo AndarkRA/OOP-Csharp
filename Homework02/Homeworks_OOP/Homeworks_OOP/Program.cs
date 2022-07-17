@@ -1,25 +1,26 @@
 ﻿using Homeworks_OOP;
 
 /// <summary>
-///  В класс банковский счет, созданный в упражнениях, добавить метод, который переводит деньги с одного счета на другой. 
-///  У метода два параметра: ссылка на объект класса банковский счет откуда снимаются деньги, второй параметр – сумма.
+///  Создать класс рациональных чисел. В классе два поля – числитель и знаменатель. 
+///  Предусмотреть конструктор. Определить операторы ==, != (метод Equals()), <, >, <=, >=, +, –, ++, --. 
+///  Переопределить метод ToString() для вывода дроби. 
+///  Определить операторы преобразования типов между типом дробь,float, int. Определить операторы *, /, %.
 /// </summary>
 
-var account = new BankAccount(1000, AccountType.Current);
-Console.WriteLine(account);
+RatioNumber number1 = new RatioNumber(5, 10);
+RatioNumber number2 = new RatioNumber(2, 10);
 
-var newAccount = new BankAccount(1000, AccountType.Current);
-Console.WriteLine(newAccount);
+Console.WriteLine(number1 == number2);
+Console.WriteLine(number1 != number2);
+Console.WriteLine(number1 < number2);
+Console.WriteLine(number1 <= number2);
+Console.WriteLine(number1 > number2);
+Console.WriteLine(number1 >= number2);
+Console.WriteLine($"{ number1}, {number2}");
 
-account.Transaction(ref newAccount, 1000);
-Console.WriteLine($"Переводим 1000 рублей со счета {newAccount.GetID()} на счет {account.GetID()}.");
-Console.WriteLine(account);
-Console.WriteLine(newAccount);
-
-Console.WriteLine("=====================================");
-StringReverse stringReverse = new();
-Console.WriteLine($"{stringReverse.StringChange("Шла Саша по шоссе и сосала сушку")}");
-
-
+//Console.Clear();
+//float number3 = number1 * number2;
+Console.WriteLine((number1 / number2).ToString());
+Console.WriteLine((number1 % number2).ToString());
 
 Console.ReadKey();
