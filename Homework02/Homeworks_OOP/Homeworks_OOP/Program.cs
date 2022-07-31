@@ -2,18 +2,18 @@
 
 
 
-var account1 = new BankAccount(100);
-var account2 = new BankAccount(5000);
+ACoder aCoder = new ACoder();
+var a = aCoder.Encode("Съешь ещё этих мягких французских булок да выпей же чаю.");
+Console.WriteLine(a);
+//Тыёщэ ёъж юуйц надлйц хсбочфитлйц вфмпл еб гьрёк зё шбя.
+Console.WriteLine(aCoder.Decode(a));
+//Съешь ещё этих мягких французских булок да выпей же чаю.
 
-Console.WriteLine(account1);
-Console.WriteLine(account2);
-
-Console.WriteLine($"Transaction success: {account1.Transaction(ref account2, 5000)}\n");
-
-Console.WriteLine(account1.Equals(account2));
-Console.WriteLine(account2.Equals(account2));
-
-Console.WriteLine(account1 == account2);
-Console.WriteLine(account1 != account2);
+BCoder bCoder = new BCoder();
+var b = bCoder.Encode("Эй, жлоб! Где туз? Прячь юных съёмщиц в шкаф.");
+Console.WriteLine(b);
+//Вх, шурю! Ьыъ млч? Поазг бсдй нещтёци э жфяк.
+Console.WriteLine(bCoder.Decode(b));
+//Эй, жлоб! Где туз? Прячь юных съёмщиц в шкаф.
 
 Console.ReadKey();
